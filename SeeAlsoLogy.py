@@ -18,12 +18,14 @@ def getSeeAlsos(url):
                  links = headline.find_next('ul').find_all('a')
                  for link in links:
                      seeAlsoTitles.append(link.text)
-                     seeAlsoLinks.append(link['href'])
+                     seeAlsoLinks.append('https://encyclopediadramatica.rs'
+                                         + link['href'])
                      # print('* ', link.text)
                      # print(link['href'])
-    return seeAlsoTitles, seeAlsoLinks
+    return seeAlsoTitles, seeAlsoLinks, soup.title.text
 
 if __name__ == '__main__':
-    Titles, Links = getSeeAlsos("https://encyclopediadramatica.rs/Logan_Paul")
+    Titles, Links, page = getSeeAlsos("https://encyclopediadramatica.rs/Logan_Paul")
+    print(page)
     print(Titles)
     print(Links)
