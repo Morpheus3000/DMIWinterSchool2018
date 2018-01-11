@@ -21,10 +21,6 @@ with open('Links.txt', 'r') as f:
                 if len(title) == 0:
                     title = [page[:-25]]
                     linky = [lin]
-                print(title)
-                print(linky)
-                print(page)
-                print('end record')
                 Titles.append(';'.join(title))
                 Links.append(';'.join(linky))
                 Pages.append(page[:-25])
