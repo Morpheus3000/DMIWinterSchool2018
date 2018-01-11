@@ -25,7 +25,7 @@ def getSeeAlsos(url):
     return seeAlsoTitles, seeAlsoLinks, soup.title.text
 
 if __name__ == '__main__':
-    Titles, Links, page = getSeeAlsos("https://encyclopediadramatica.rs/Logan_Paul")
+    Titles, Links, page = getSeeAlsos("https://encyclopediadramatica.rs/2016_Presidential_Election")
     print(page)
     print(Titles)
     print(Links)
